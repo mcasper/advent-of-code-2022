@@ -17,5 +17,5 @@ if !current_elf.empty?
   elves << current_elf
 end
 
-result = elves.map { |elf| elf.sum }.max
+result = elves.map { |elf| elf.sum }.sort.last(3).sum
 puts "result: #{result}"

@@ -5,7 +5,7 @@ use anyhow::Result;
 fn main() -> Result<()> {
     let lines = lines("src/bin/input.txt".into())?;
     let result = solve(lines)?;
-    println!("Day 6, part 1 result: {}", result);
+    println!("Day 6, part 2 result: {}", result);
     Ok(())
 }
 
@@ -15,7 +15,7 @@ struct Buffer {
 
 impl Buffer {
     fn add(&mut self, c: char) {
-        if self.inner.len() >= 4 {
+        if self.inner.len() >= 14 {
             self.inner.pop_front();
         }
 
@@ -23,7 +23,7 @@ impl Buffer {
     }
 
     fn at_marker(&self) -> bool {
-        if self.inner.len() != 4 {
+        if self.inner.len() != 14 {
             return false;
         }
 
@@ -71,7 +71,7 @@ mod tests {
 
     #[test]
     fn test_solve() {
-        let expected = 7;
+        let expected = 19;
         let actual = solve(lines("src/bin/sample.txt".into()).unwrap()).unwrap();
         assert_eq!(expected, actual);
     }

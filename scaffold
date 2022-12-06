@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+daynum = ARGV[0].to_i
+
+if daynum == 0
+  abort "First argument should be day number"
+end
+
+`cargo init --bin day#{daynum}`
+`cd day#{daynum} && cargo add anyhow`

@@ -9,7 +9,7 @@ end
 `cargo init --bin day#{daynum}`
 `cd day#{daynum} && cargo add anyhow`
 `mkdir day#{daynum}/src/bin`
-`touch day#{daynum}/src/bin/part1.rs`
+`cp day#{daynum-1}/src/bin/part1.rs day#{daynum}/src/bin/`
 `touch day#{daynum}/src/bin/part2.rs`
 `touch day#{daynum}/src/bin/input.txt`
 `touch day#{daynum}/src/bin/sample.txt`

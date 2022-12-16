@@ -5,7 +5,7 @@ use anyhow::Result;
 fn main() -> Result<()> {
     let lines = lines("src/bin/input.txt".into())?;
     let result = solve(lines)?;
-    println!("Day 12, part 1 result: {}", result);
+    println!("Day 13, part 1 result: {}", result);
     Ok(())
 }
 
